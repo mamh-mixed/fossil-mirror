@@ -198,10 +198,11 @@ textarea.wikiedit {
   padding: 0.1em 1em;
 }
 
-.doc > .content dd, .content dt,
-.doc > .content li,
-.doc > .content p,
-.doc > .content table
+.content dd,
+.content dt,
+.content li,
+.content p,
+.content table
 {
   line-height: 1.4em;
 }
@@ -233,26 +234,26 @@ textarea.wikiedit {
   list-style-type: disc;
 }
 
-.doc > .content table {
+.content table {
   background-color: #f0f5f9;
   border: 1px solid #a7c2dc;
   border-radius: 0.5em;
   border-spacing: 0;
   padding: 6px;
 }
-.doc > .content th {
+.content th {
   border-bottom: 1px solid #dee8f2;
   padding-bottom: 4px;
   padding-right: 6px;
   text-align: left;
 }
-.doc > .content tr > th {
+.content tr > th {
   background-color: #dee8f0;
 }
-.doc > .content tr:nth-child(odd) {
+.content tr:nth-child(odd) {
   background-color: #e0e8ee;
 }
-.doc > .content td {
+.content td {
   padding-bottom: 4px;
   padding-right: 6px;
   text-align: left;
@@ -390,46 +391,46 @@ tr.timelineSecondary td.timelineColumnarCell {
   .mainmenu {
     padding: 10px;
   }
-  .doc > .content > .markdown > blockquote {
+  .content > .markdown > blockquote {
     /* Slight indent for MD blockquotes, since they're styled with extra
      * whitespace above for both mobile and desktop. */
     margin-left: 60pt;
   }
-  .doc > .content blockquote {
+  .content blockquote {
     /* Apply extra indent relative to "p" for backwards compatibility
      * in wiki docs since Fossil's generator misuses the blockquote
      * tag against HTML and MD norms to mean "indented paragraph." */
     margin-left: 80pt;
   }
-  .doc > .content dd { margin-left: 30pt; margin-bottom: 1em; }
-  .doc > .content dl { margin-left: 60pt; }
-  .doc > .content dt { margin-left: 10pt; }
-  .doc > .content h1 { margin-left: 10pt; }
-  .doc > .content h2 { margin-left: 20pt; }
-  .doc > .content h3 { margin-left: 30pt; }
-  .doc > .content h4 { margin-left: 40pt; }
-  .doc > .content h5 { margin-left: 50pt; }
-  .doc > .content hr { margin-left: 10pt; }
+  .content dd { margin-left: 30pt; margin-bottom: 1em; }
+  .content dl { margin-left: 60pt; }
+  .content dt { margin-left: 10pt; }
+  .content h1 { margin-left: 10pt; }
+  .content h2 { margin-left: 20pt; }
+  .content h3 { margin-left: 30pt; }
+  .content h4 { margin-left: 40pt; }
+  .content h5 { margin-left: 50pt; }
+  .content hr { margin-left: 10pt; }
 
   /* Extra > in these relative to above is to ensure we indent top-level
    * markup only to avoid double-indent of nested markup like p in li. */
-  .doc > .content > p,
-  .doc > .content > .markdown > p,
-  .doc > .content > .fossil-doc > p,
-  .doc > .content > ol, .doc > .content > ul,
-  .doc > .content > .markdown > ol, .doc > .content > .markdown > ul,
-  .doc > .content > .fossil-doc > ol, .doc > .content > .fossil-doc > ul,
-  .doc > .content table {
+  .content > p,
+  .content > .markdown > p,
+  .content > .fossilp,
+  .content > ol, .content > ul,
+  .content > .markdown > ol, .content > .markdown > ul,
+  .content > .fossilol, .content > .fossilul,
+  .content table {
     margin-left: 50pt;
     margin-right: 50pt;
   }
-  .doc > .content > pre,
-  .doc > .content > .markdown > pre,
-  .doc > .content > .fossil-doc > pre {
+  .content > pre,
+  .content > .markdown > pre,
+  .content > .fossilpre {
     margin-left: 70pt;
     margin-right: 50pt;
   }
-  .doc > .content .pikchr-wrapper {
+  .content .pikchr-wrapper {
     margin-left: 70pt;
   }
   div.pikchr-wrapper.indent:not(.source) {
